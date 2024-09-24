@@ -1,21 +1,55 @@
 body {
-    background-color: #0c1b2a;
+    background: linear-gradient(135deg, #0c1b2a, #1f2a38);
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(31, 42, 56, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    padding-top: 90px; /* Add padding to make space for the floating image */
 }
 
 header {
     background-color: #0078d4;
     padding: 20px;
-    text-align: center;
     border-bottom: 2px solid #005a9e;
+    position: relative;
 }
 
-h1 {
-    margin: 0;
+header .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    position: absolute;
+    top: -75px; /* Adjusted to float above the container */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header h1 {
+    margin: 80px 0 10px;
     font-size: 2.5em;
+    color: #ffffff;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
     color: #ffffff;
 }
 
@@ -24,20 +58,26 @@ main {
 }
 
 h2 {
-    color: #0078d4;
+    color: #00aaff;
+    margin-bottom: 10px;
 }
 
 #personal-info p {
     font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 #links ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #links li {
-    margin: 10px 0;
+    margin: 10px;
+    flex: 1 1 45%; /* Adjust to make two columns */
 }
 
 #links a {
@@ -46,7 +86,8 @@ h2 {
     font-size: 1.2em;
     display: flex;
     align-items: center;
-    background-color: #0078d4;
+    justify-content: center;
+    background-color: #00aaff;
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -57,7 +98,7 @@ h2 {
 }
 
 #links a:hover {
-    background-color: #005a9e;
+    background-color: #0088cc;
 }
 
 footer {
@@ -65,7 +106,4 @@ footer {
     text-align: center;
     padding: 10px;
     border-top: 2px solid #005a9e;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
